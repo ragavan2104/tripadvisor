@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.NAVBAR__1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.NAVBAR__1 h1 {
+    font-size: 24px;
+    color:black;
+}
+
+.navbar__2 {
+    display: flex;
+    gap: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar__2 p:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.navbar__3 {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar__3 p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar__3 h3 {
+    padding: 10px 20px;
+    background-color:black;
+    color: white;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar__3 h3:hover {
+    background-color: #2d9249;
+}
+
+.nav {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.nav h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.option p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 3px solid transparent;
+}
+
+.option p:hover {
+    color: #34a853;
+    border-bottom: 3px solid #34a853;
+}
+
+.search {
+    padding: 14px 25px;
+    border-radius: 50px;
+    width: 50%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 30px auto;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.search i {
+    font-size: 18px;
+}
+
+.search input {
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search button {
+    background-color: #34a853;
+    border-radius: 25px;
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #2d9249;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.banner img {
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.caption {
+    margin: 40px 10% 30px;
+}
+
+.caption h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.caption p {
+    font-size: 18px;
+    color: #555;
+}
+
+.card, .card--4, .card--5 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 30px 5%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+    width: 90%;
+    padding-bottom: 20px;
+}
+
+.card::-webkit-scrollbar, 
+.card--4::-webkit-scrollbar,
+.card--5::-webkit-scrollbar,
+.card--2::-webkit-scrollbar, .card--3::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.card__1, .card__2, .card__3, .card__4, .card__5, .card--4__1, .card--5__1 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    flex: 0 0 auto;
+}
+
+.card__1:hover, .card__2:hover, .card__3:hover, .card__4:hover, .card__5:hover, .card--4__1:hover, .card--5__1:hover {
+    transform: translateY(-5px);
+}
+
+.card__1 img, .card__2 img, .card__3 img, .card__4 img, .card__5 img, .card--4__1 img, .card--5__1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__1 h1, .card__2 h1, .card__3 h1, .card__4 h1, .card__5 h1, .card--4__1 h1, .card--5__1 h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 28px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.caption__2, .caption3, .caption--5, .caption--6 {
+    margin: 50px 10% 20px;
+}
+
+.caption__2 h1, .caption3 h1, .caption--5 h1, .caption--6 h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.caption__2 p, .caption3 p, .caption--5 p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.card--2, .card--3 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 30px 5%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; 
+}
+
+.card--2__1, .card--2__2, .card--2__3, .card--2__4, .card--3__1 {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    flex: 0 0 auto;
+}
+
+.card--2__1:hover, .card--2__2:hover, .card--2__3:hover, .card--2__4:hover, .card--3__1:hover {
+    transform: translateY(-5px);
+}
+
+.card--2__1 img, .card--2__2 img, .card--2__3 img, .card--2__4 img, .card--3__1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card--2__1 p, .card--2__2 p, .card--2__3 p, .card--2__4 p, .card--3__1 h1 {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.card--2__1 span, .card--2__2 span, .card--2__3 span, .card--2__4 span, .card--3__1 span {
+    display: block;
+    padding: 0 15px;
+    color: #34a853;
+    font-weight: 500;
+}
+
+.card--2__1 p:last-child, .card--2__2 p:last-child, .card--2__3 p:last-child, .card--2__4 p:last-child, .card--3__1 p {
+    padding: 0 15px 15px;
+    color: #555;
+    font-weight: 501;
+}
+
+.container {
+    background-color: #f2f1ec;
+    padding: 40px 0;
+    margin-top: 50px;
+    display: flex;
+}
+
+.container h1 {
+    margin-left: 10%;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.container--1 {
+    margin-left: 100px;
+}
+
+.container--1 img {
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container--1 h2 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 10% 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-section ul li:hover {
+    color: #34a853;
+}
+
+.app-download {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-download img {
+    width: 150px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #34a853;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .option {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .search {
+        width: 90%;
+    }
+    
+    .card, .card--2, .card--3, .card--4, .card--5 {
+        flex-direction: column;
+        align-items: center;
+        overflow-x: visible;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+}
